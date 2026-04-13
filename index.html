@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Better Homes Marketing — Premium Real Estate in Hyderabad. Discover Anvita Ivana, High9, and Parkside. Trusted by 500+ families.">
+    <meta name="keywords"
+        content="real estate Hyderabad, premium properties, Anvita Ivana, Anvita High9, Parkside, Better Homes Marketing">
+    <title>Better Homes Marketing | Premium Real Estate · Hyderabad</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-overlay">
+        <button class="mobile-nav-close" id="mobile-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        <ul>
+            <li><a href="#home" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#properties" class="mobile-link">Properties</a></li>
+            <li><a href="#services" class="mobile-link">Services</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- ── Header ── -->
+    <header id="main-header">
+        <div class="container nav-flex">
+            <a href="#home" class="logo" aria-label="Better Homes Marketing">
+                <img src="BHM Logo (1).png" alt="Better Homes Marketing Logo">
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-ink btn-sm" id="enquire-btn">Enquire Now</a>
+                <button class="menu-btn" id="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ── Hero ── -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-wrapper">
+                <video autoplay muted loop playsinline class="hero-video">
+                    <source src="images/video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="hero-scroll-hint" aria-hidden="true">
+                <span class="scroll-line"></span>
+                Scroll
+            </div>
+        </section>
+
+        <!-- ── About ── -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="eyebrow reveal">About Us</span>
+                        <h2 class="h-title reveal reveal-delay-1">
+                            Helping You Find Your Dream Home.
+                        </h2>
+                        <p class="reveal reveal-delay-2">
+                            At Better Homes Marketing, we help families in Hyderabad find the perfect place to live. We
+                            believe in being honest, transparent, and making sure you are happy every step of the way.
+                        </p>
+                        <div class="stats-row">
+                            <div class="stat-item reveal reveal-delay-1">
+                                <span class="stat-number" data-count="25">0</span>
+                                <span class="stat-label">Years of Trust</span>
+                            </div>
+                            <div class="stat-item reveal reveal-delay-2">
+                                <span class="stat-number" data-count="500">0</span>
+                                <span class="stat-label">Happy Families</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual reveal">
+                        <img src="images/about.png" alt="Premium real estate property" class="about-img-main">
+                        <div class="about-visual-label">
+                            <strong>25+</strong>
+                            <span>Years of Excellence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Properties ── -->
+        <section class="properties-section" id="properties">
+            <div class="container prop-intro">
+                <h2 class="h-title reveal">PROPERTIES</h2>
+            </div>
+
+            <div class="prop-showcase-list">
+
+                <!-- Property 1: Anvita Ivana -->
+                <article class="prop-showcase-block reveal">
+                    <div class="container">
+                        <div class="prop-row-header">
+                            <h3 class="prop-name">Anvita Ivana</h3>
+                            <p class="prop-loc"><i class="fas fa-location-dot"></i> Kollur, Hyderabad</p>
+                        </div>
+                    </div>
+
+                    <div class="prop-showcase-row">
+                        <!-- Background Image Slider -->
+                        <div class="swiper prop-bg-swiper" id="swiper-ivana">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/ivana1.jpg" alt="Ivana 1"></div>
+                                <div class="swiper-slide"><img src="images/ivana2.jpg" alt="Ivana 2"></div>
+                                <div class="swiper-slide"><img src="images/ivana3.jpg" alt="Ivana 3"></div>
+                                <div class="swiper-slide"><img src="images/ivana4.jpg" alt="Ivana 4"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <div class="container card-overlay-container">
+                            <div class="prop-overlay-card">
+                                <h4 class="prop-card-name">Anvita Ivana</h4>
+                                <p class="prop-desc">A perfect blend of comfort, elegance, and smart connectivity in the
+                                    heart of Hyderabad's fastest-growing corridor.</p>
+                                <a href="#contact" class="btn btn-ink">View Details &nbsp; <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property 2: Anvita High9 -->
+                <article class="prop-showcase-block reveal">
+                    <div class="container">
+                        <div class="prop-row-header">
+                            <h3 class="prop-name">Anvita High9</h3>
+                            <p class="prop-loc"><i class="fas fa-location-dot"></i> Tellapur, ORR Exit 9</p>
+                        </div>
+                    </div>
+
+                    <div class="prop-showcase-row prop-row-reverse">
+                        <div class="swiper prop-bg-swiper" id="swiper-high9">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/high9_1.jpg" alt="High9 1"></div>
+                                <div class="swiper-slide"><img src="images/high9_2.jpg" alt="High9 2"></div>
+                                <div class="swiper-slide"><img src="images/high9_3.jpg" alt="High9 3"></div>
+                                <div class="swiper-slide"><img src="images/high9_4.jpg" alt="High9 4"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <div class="container card-overlay-container">
+                            <div class="prop-overlay-card">
+                                <h4 class="prop-card-name">Anvita High9</h4>
+                                <p class="prop-desc">An oasis of grandeur in Tellapur, poised gracefully beside the
+                                    gateway of ORR Exit No. 9 — where luxury meets connectivity.</p>
+                                <a href="#contact" class="btn btn-ink">View Details &nbsp; <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property 3: Anvita Parkside -->
+                <article class="prop-showcase-block reveal">
+                    <div class="container">
+                        <div class="prop-row-header">
+                            <h3 class="prop-name">Anvita Parkside</h3>
+                            <p class="prop-loc"><i class="fas fa-location-dot"></i> Medchal, ORR Exit 6</p>
+                        </div>
+                    </div>
+
+                    <div class="prop-showcase-row">
+                        <div class="swiper prop-bg-swiper" id="swiper-parkside">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/park1.jpeg" alt="Parkside 1"></div>
+                                <div class="swiper-slide"><img src="images/park2.jpeg" alt="Parkside 2"></div>
+                                <div class="swiper-slide"><img src="images/park3.png" alt="Parkside 3"></div>
+                                <div class="swiper-slide"><img src="images/park4.jpeg" alt="Parkside 4"></div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+
+                        <div class="container card-overlay-container">
+                            <div class="prop-overlay-card">
+                                <h4 class="prop-card-name">Anvita Parkside</h4>
+                                <p class="prop-desc">An eco-friendly community designed for a sustainable and holistic
+                                    lifestyle — where nature and modern living coexist beautifully.</p>
+                                <a href="#contact" class="btn btn-ink">View Details &nbsp; <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- ── Services ── -->
+
+        <!-- ── Services (Pathway to Perfect Home) ── -->
+        <section class="services-section" id="services">
+            <div class="container">
+                <div class="services-header reveal">
+                    <h2 class="h-title text-center">Your Pathway to the Perfect Home: <br> <span>A Step-by-Step Guide to
+                            Shortlisting Your Dream Property</span></h2>
+                </div>
+
+                <div class="pathway-container">
+                    <div class="pathway-line"></div>
+                    <div class="pathway-steps">
+                        <!-- Step 1 -->
+                        <div class="pathway-item reveal">
+                            <div class="step-icon">
+                                <i class="fas fa-house-chimney"></i>
+                            </div>
+                            <div class="step-content">
+                                <span class="step-num">Step 1</span>
+                                <h3 class="step-title">Shortlist your property</h3>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="pathway-item reveal reveal-delay-1">
+                            <div class="step-icon">
+                                <i class="fas fa-map-location-dot"></i>
+                            </div>
+                            <div class="step-content">
+                                <span class="step-num">Step 2</span>
+                                <h3 class="step-title">Free site visit</h3>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="pathway-item reveal reveal-delay-2">
+                            <div class="step-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <div class="step-content">
+                                <span class="step-num">Step 3</span>
+                                <h3 class="step-title">Loan & Legal Assistance</h3>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="pathway-item reveal reveal-delay-3">
+                            <div class="step-icon">
+                                <i class="fas fa-key"></i>
+                            </div>
+                            <div class="step-content">
+                                <span class="step-num">Step 4</span>
+                                <h3 class="step-title">Book Your Property</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Contact ── -->
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <div class="contact-inner">
+                    <div class="contact-left reveal">
+                        <span class="eyebrow">Get In Touch</span>
+                        <h2 class="h-title">Let's Find Your Dream Home.</h2>
+                        <p>Reach out for a private consultation. Our team is ready to guide you to the perfect property.
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <span>+91 88855 54050</span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span>info@betterhomesmarketing.in</span>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="contact-detail-icon">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <span>Hyderabad, Telangana, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrap reveal reveal-delay-1">
+                        <p class="form-title">Send an Enquiry</p>
+                        <form class="contact-form" id="contact-form" novalidate>
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="fname">Your Name</label>
+                                    <input type="text" id="fname" name="name" placeholder="e.g. Arjun Sharma" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="fphone">Phone Number</label>
+                                    <input type="tel" id="fphone" name="phone" placeholder="+91 98765 43210" required>
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="femail">Email Address</label>
+                                <input type="email" id="femail" name="email" placeholder="you@email.com" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="fmessage">Message</label>
+                                <textarea id="fmessage" name="message" placeholder="Tell us what you're looking for..."
+                                    rows="4"></textarea>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-ink btn-block" id="submit-btn">
+                                    Send Enquiry &nbsp; <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="BHM Logo (1).png" alt="Better Homes Marketing" class="footer-logo">
+                    <p class="footer-tagline">Elevating lifestyle standards through premium real estate offerings in
+                        Hyderabad.</p>
+                    <div class="social-row">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/918885554050" aria-label="WhatsApp" target="_blank" rel="noopener"><i
+                                class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Properties</h4>
+                    <ul>
+                        <li><a href="#properties">Anvita Ivana</a></li>
+                        <li><a href="#properties">Anvita High9</a></li>
+                        <li><a href="#properties">Anvita Parkside</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Better Homes Marketing. All Rights Reserved.</p>
+                <p>Designed for Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
