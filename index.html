@@ -56,7 +56,7 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <a href="#contact" class="btn btn-ink btn-sm" id="enquire-btn">Enquire Now</a>
+                <button class="btn btn-ink btn-sm" id="header-enquire-btn">Enquire Now</button>
                 <button class="menu-btn" id="mobile-toggle" aria-label="Open menu"><i class="fas fa-bars"></i></button>
             </div>
         </div>
@@ -93,7 +93,7 @@
                         </p>
                         <div class="stats-row">
                             <div class="stat-item reveal reveal-delay-1">
-                                <span class="stat-number" data-count="25">0</span>
+                                <span class="stat-number" data-count="4">0</span>
                                 <span class="stat-label">Years of Trust</span>
                             </div>
                             <div class="stat-item reveal reveal-delay-2">
@@ -106,7 +106,7 @@
                     <div class="about-visual reveal">
                         <img src="images/about.png" alt="Premium real estate property" class="about-img-main">
                         <div class="about-visual-label">
-                            <strong>25+</strong>
+                            <strong>4+</strong>
                             <span>Years of Excellence</span>
                         </div>
                     </div>
@@ -149,7 +149,7 @@
                                 <h4 class="prop-card-name">Anvita Ivana</h4>
                                 <p class="prop-desc">A perfect blend of comfort, elegance, and smart connectivity in the
                                     heart of Hyderabad's fastest-growing corridor.</p>
-                                <a href="#contact" class="btn btn-ink">View Details &nbsp; <i
+                                <a href="images/Anvita-Brochure.pdf" target="_blank" class="btn btn-ink">View Details &nbsp; <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -182,7 +182,7 @@
                                 <h4 class="prop-card-name">Anvita High9</h4>
                                 <p class="prop-desc">An oasis of grandeur in Tellapur, poised gracefully beside the
                                     gateway of ORR Exit No. 9 — where luxury meets connectivity.</p>
-                                <a href="#contact" class="btn btn-ink">View Details &nbsp; <i
+                                <a href="images/High9_Brochure.pdf" target="_blank" class="btn btn-ink">View Details &nbsp; <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -215,7 +215,7 @@
                                 <h4 class="prop-card-name">Anvita Parkside</h4>
                                 <p class="prop-desc">An eco-friendly community designed for a sustainable and holistic
                                     lifestyle — where nature and modern living coexist beautifully.</p>
-                                <a href="#contact" class="btn btn-ink">View Details &nbsp; <i
+                                <a href="images/Anvita-Parkside-Web-Brochure.pdf" target="_blank" class="btn btn-ink">View Details &nbsp; <i
                                         class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -301,7 +301,7 @@
                                 <div class="contact-detail-icon">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                <span>+91 9876543210</span>
+                                <span>+91 98 66 76 0000</span>
                             </div>
                             <div class="contact-detail-item">
                                 <div class="contact-detail-icon">
@@ -313,7 +313,7 @@
                                 <div class="contact-detail-icon">
                                     <i class="fas fa-location-dot"></i>
                                 </div>
-                                <span>Hyderabad, Telangana, India</span>
+                                <span>Flat No: 8-3-167/K/1-2/204, Building: VISWA HEIGHTS, <br> Road/Street: KALYAN NAGAR - 3, City: Hyderabad, <br> District: Rangareddy, State: Telangana, PIN Code: 500090, <br> Hyderabad, Telangana, India</span>
                             </div>
                         </div>
                     </div>
@@ -328,7 +328,7 @@
                                 </div>
                                 <div class="form-field">
                                     <label for="fphone">Phone Number</label>
-                                    <input type="tel" id="fphone" name="phone" placeholder="+91 98765 43210" required>
+                                    <input type="tel" id="fphone" name="phone" placeholder="+91 98667 60000" required>
                                 </div>
                             </div>
                             <div class="form-field">
@@ -364,7 +364,7 @@
                     <div class="social-row">
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/919876543210" aria-label="WhatsApp" target="_blank" rel="noopener"><i
+                        <a href="https://wa.me/919866760000" aria-label="WhatsApp" target="_blank" rel="noopener"><i
                                 class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -391,10 +391,50 @@
 
             <div class="footer-bottom">
                 <p>© 2026 Better Homes Marketing. All Rights Reserved.</p>
-                <p>Designed for Excellence.</p>
+                <p>Designed by <a href="https://digitalwin.in" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: 500;">Digitalwin Technologies</a> | <a href="#" style="color: inherit; text-decoration: none;">Privacy Policy</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- ── Enquiry Modal ── -->
+    <div class="modal-overlay" id="enquiry-modal">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="eyebrow">Enquiry</span>
+                    <h2 class="h-title">Get in Touch</h2>
+                    <p>Tell us what you're looking for, and we'll help you find your dream home.</p>
+                </div>
+                <form class="contact-form" id="modal-contact-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="m-fname">Your Name</label>
+                            <input type="text" id="m-fname" name="name" placeholder="e.g. Arjun Sharma" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="m-fphone">Phone Number</label>
+                            <input type="tel" id="m-fphone" name="phone" placeholder="+91 98667 60000" required>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label for="m-femail">Email Address</label>
+                        <input type="email" id="m-femail" name="email" placeholder="you@email.com" required>
+                    </div>
+                    <div class="form-field">
+                        <label for="m-fmessage">Message</label>
+                        <textarea id="m-fmessage" name="message" placeholder="Tell us what you're looking for..."
+                            rows="4"></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-ink btn-block" id="modal-submit-btn">
+                            Send Enquiry &nbsp; <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

@@ -776,7 +776,7 @@ nav a:hover::after {
     background: var(--white);
     width: 100%;
     max-width: 440px;
-    padding: 24px 32px;
+    padding: 16px 24px;
     pointer-events: auto;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -784,19 +784,19 @@ nav a:hover::after {
 }
 
 .prop-card-name {
-    font-size: 26px;
+    font-size: 22px;
     color: var(--ink);
     font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     letter-spacing: -0.01em;
 }
 
 .prop-desc {
-    font-size: 15px;
-    line-height: 1.8;
+    font-size: 14px;
+    line-height: 1.5;
     color: var(--ink-mid);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     font-weight: 300;
 }
 
@@ -837,7 +837,7 @@ nav a:hover::after {
 
     .prop-overlay-card {
         max-width: 100%;
-        padding: 48px 32px;
+        padding: 24px 20px;
         box-shadow: none;
         border-bottom: 1px solid var(--border);
     }
@@ -1479,5 +1479,90 @@ footer {
 @media (min-width: 2000px) {
     :root {
         --container: 1600px;
+    }
+}
+
+/* ================================================================
+   MODAL — Enquiry Pop-up
+   ================================================================ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(19, 15, 38, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease);
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-container {
+    background: var(--white);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+    padding: 60px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.2);
+    transform: translateY(30px);
+    transition: transform 0.6s var(--ease-out);
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+.modal-overlay.open .modal-container {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--ink-mid);
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.3s var(--ease);
+}
+
+.modal-close:hover {
+    color: var(--ink);
+}
+
+.modal-header {
+    margin-bottom: 32px;
+}
+
+.modal-header .eyebrow {
+    margin-bottom: 12px;
+}
+
+.modal-header h2 {
+    margin-bottom: 12px;
+}
+
+.modal-header p {
+    font-size: 15px;
+    color: var(--ink-mid);
+}
+
+@media (max-width: 600px) {
+    .modal-container {
+        padding: 40px 24px;
+    }
+
+    .modal-header h2 {
+        font-size: 28px;
     }
 }

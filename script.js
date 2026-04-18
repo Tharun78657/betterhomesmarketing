@@ -165,27 +165,99 @@ document.addEventListener('DOMContentLoaded', () => {
     // ═══════════════════════════════════════════════
     // 9. REFRESH ScrollTrigger after load
     // ═══════════════════════════════════════════════
-    const form = document.getElementById('contact-form');
-    const submitBtn = document.getElementById('submit-btn');
+    // ═══════════════════════════════════════════════
+    // 8. ENQUIRY MODAL LOGIC
+    // ═══════════════════════════════════════════════
+    const modal = document.getElementById('enquiry-modal');
+    const headerEnquireBtn = document.getElementById('header-enquire-btn');
+    const modalClose = document.getElementById('modal-close');
+    const modalForm = document.getElementById('modal-contact-form');
+    const modalSubmitBtn = document.getElementById('modal-submit-btn');
 
-    form?.addEventListener('submit', e => {
+    const openModal = () => {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+
+    headerEnquireBtn?.addEventListener('click', openModal);
+    modalClose?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', e => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Handle Modal Form Submission
+    modalForm?.addEventListener('submit', e => {
         e.preventDefault();
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Sending&nbsp; <i class="fas fa-spinner fa-spin"></i>';
+
+        // Get form data
+        const name = document.getElementById('m-fname').value;
+        const phone = document.getElementById('m-fphone').value;
+        const email = document.getElementById('m-femail').value;
+        const message = document.getElementById('m-fmessage').value;
+
+        // Construct WhatsApp message
+        const whatsappNumber = '919866760000';
+        const text = `Hello Better Homes Marketing,\n\nI am interested in your properties (Via Enquiry Modal). Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Message:* ${message}`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+        modalSubmitBtn.disabled = true;
+        modalSubmitBtn.innerHTML = 'Redirecting to WhatsApp... &nbsp; <i class="fas fa-spinner fa-spin"></i>';
 
         setTimeout(() => {
-            submitBtn.innerHTML = 'Enquiry Sent! &nbsp;<i class="fas fa-check"></i>';
-            submitBtn.style.background = '#2d6a4f';
-            submitBtn.style.borderColor = '#2d6a4f';
-            form.reset();
+            window.open(whatsappUrl, '_blank');
+            modalSubmitBtn.innerHTML = 'Enquiry Sent! &nbsp;<i class="fas fa-check"></i>';
+            modalSubmitBtn.style.background = '#2d6a4f';
+            modalSubmitBtn.style.borderColor = '#2d6a4f';
+            modalForm.reset();
 
             setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = 'Send Enquiry &nbsp; <i class="fas fa-arrow-right"></i>';
-                submitBtn.style.background = '';
-                submitBtn.style.borderColor = '';
+                closeModal();
+                modalSubmitBtn.disabled = false;
+                modalSubmitBtn.innerHTML = 'Send Enquiry &nbsp; <i class="fas fa-arrow-right"></i>';
+                modalSubmitBtn.style.background = '';
+                modalSubmitBtn.style.borderColor = '';
+            }, 3000);
+        }, 1200);
+    });
+
+    // Handle Persistent Contact Form (Bottom of page)
+    const persistentForm = document.getElementById('contact-form');
+    const persistentSubmitBtn = document.getElementById('submit-btn');
+
+    persistentForm?.addEventListener('submit', e => {
+        e.preventDefault();
+
+        const name = document.getElementById('fname').value;
+        const phone = document.getElementById('fphone').value;
+        const email = document.getElementById('femail').value;
+        const message = document.getElementById('fmessage').value;
+
+        const whatsappNumber = '919866760000';
+        const text = `Hello Better Homes Marketing,\n\nI am interested in your properties. Here are my details:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Email:* ${email}\n*Message:* ${message}`;
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+        persistentSubmitBtn.disabled = true;
+        persistentSubmitBtn.innerHTML = 'Redirecting to WhatsApp... &nbsp; <i class="fas fa-spinner fa-spin"></i>';
+
+        setTimeout(() => {
+            window.open(whatsappUrl, '_blank');
+            persistentSubmitBtn.innerHTML = 'Enquiry Sent! &nbsp;<i class="fas fa-check"></i>';
+            persistentSubmitBtn.style.background = '#2d6a4f';
+            persistentSubmitBtn.style.borderColor = '#2d6a4f';
+            persistentForm.reset();
+
+            setTimeout(() => {
+                persistentSubmitBtn.disabled = false;
+                persistentSubmitBtn.innerHTML = 'Send Enquiry &nbsp; <i class="fas fa-arrow-right"></i>';
+                persistentSubmitBtn.style.background = '';
+                persistentSubmitBtn.style.borderColor = '';
             }, 3500);
-        }, 1600);
+        }, 1200);
     });
 
 
